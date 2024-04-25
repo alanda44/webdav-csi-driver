@@ -1,5 +1,5 @@
-PKG=github.com/scodeman/webdav-csi-driver
-CSI_DRIVER_IMAGE?=scodeman/webdav-csi-driver
+PKG=github.com/alanda44/webdav-csi-driver
+CSI_DRIVER_IMAGE?=alanda44/webdav-csi-driver
 CSI_DRIVER_DOCKERFILE=Dockerfile
 VERSION=v0.0.1
 GIT_COMMIT?=$(shell git rev-parse HEAD)
@@ -22,7 +22,7 @@ image:
 
 .PHONY: image-clean
 image-clean:
-	docker rmi -f scodeman/webdav-csi-driver:latest scodeman/webdav-csi-driver:$(VERSION) webdav_csi_driver_build   -f
+	docker rmi -f alanda44/webdav-csi-driver:latest alanda44/webdav-csi-driver:$(VERSION) webdav_csi_driver_build   -f
 
 .PHONY: push
 push: image
